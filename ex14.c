@@ -15,15 +15,21 @@ void print_arguments(int argc,char *argv[])
 
 void print_letters(char arg[])
 {
-	printf("arg length : %d ",(int)strlen(arg));
-
-	int i = 0;
 	
-	for( i = 0; arg[i] != '\0'; i++){
+	int strlen1 = strlen(arg);
+	int i = 0;
+
+	printf("arg length : %d ", strlen1);
+
+	for (int i = 0; i<=6;i++){
+		printf("\narg[%d] : %d = %c",i,arg[i],arg[i]);
+	}	
+
+	for( i = 0; i != strlen1 ; i++){
 		char ch = arg[i];
 
 		if(isalpha(ch) || isblank(ch)) {
-			printf("'%c' == %d ",ch,ch);
+			printf("\n'%c' == %d ",ch,ch);
 		}
 	}
 	
