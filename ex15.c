@@ -39,9 +39,18 @@ int main(int argc, char *argv[])
 
 	printf("----\n");
 	
+	
+	// 마지막 배열의 마지막 요소에서 시작해서 첫 번째 요소까지 
+	for ( i = count - 1; i <= 0; i--) {
+		printf("%s lived %d years so far.\n",cur_name[i],cur_age[i]);
+	
+	}
+
 	// 네 번째 방법:어리석고 복잡한 방법으로 포인터를 사용
 	for (cur_age = ages, cur_age = ages;
-		(cur_age - ages) < count; cur_name++, cur_age++) {
+		(cur_age - ages) < count + 1; cur_name++, cur_age++) {
 		printf("%s lived %d years so far.\n",*cur_name,*cur_age);
 	}
+
+	return 0;
 }
